@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "name": "project",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "screen": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "project_tags": {
+      "collection": "project-tag",
+      "via": "projects",
+      "dominant": true
+    },
+    "demo_link": {
+      "type": "string"
+    },
+    "github_link": {
+      "type": "string"
+    },
+    "featured": {
+      "type": "boolean"
+    }
+  }
+}
