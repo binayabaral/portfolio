@@ -3,7 +3,7 @@
 		<section class="contact">
 			<div class="container">
 				<h1>Let's Connect!</h1>
-				<form action="#">
+				<form name="contact" method="POST" data-netlify="true">
 					<div class="form-grp">
 						<label for="contact__name">Name</label>
 						<input type="text" id="contact__name" name="Name" required />
