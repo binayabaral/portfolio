@@ -11,20 +11,20 @@
 					<div class="sender-info">
 						<div class="form-grp">
 							<label for="contact__name">Your name:</label>
-							<input type="text" id="contact__name" name="name" v-model="formData.name" />
+							<input type="text" id="contact__name" name="name" v-model="formData.name" required />
 						</div>
 						<div class="form-grp">
 							<label for="contact__email">Your email:</label>
-							<input type="email" id="contact__email" name="email" v-model="formData.email" />
+							<input type="email" id="contact__email" name="email" v-model="formData.email" required />
 						</div>
 						<div class="form-grp">
 							<label for="contact__subject">Subject:</label>
-							<input type="text" id="contact__subject" name="name" v-model="formData.subject" />
+							<input type="text" id="contact__subject" name="name" v-model="formData.subject" required />
 						</div>
 					</div>
 					<div class="form-grp">
 						<label for="contact__message">Message</label>
-						<textarea name="message" id="contact__message" v-model="formData.message"></textarea>
+						<textarea name="message" id="contact__message" v-model="formData.message" required></textarea>
 					</div>
 					<div class="form-grp">
 						<div data-netlify-recaptcha="true"></div>
@@ -61,10 +61,10 @@ export default {
 			})
 				.then(() => {
 					alert('Message sent successfully');
-					formData.name = '';
-					formData.email = '';
-					formData.subject = '';
-					formData.message = '';
+					this.formData.name = '';
+					this.formData.email = '';
+					this.formData.subject = '';
+					this.formData.message = '';
 				})
 				.catch(error => alert(error));
 		},
