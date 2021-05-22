@@ -39,4 +39,8 @@ export default {
 .VueCarousel-dot {
 	margin: 0 !important;
 }
+
+.VueCarousel-wrapper {
+	border: 1px solid $japanese-laurel;
+}
 </style>

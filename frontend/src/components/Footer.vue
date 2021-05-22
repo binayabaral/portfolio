@@ -34,11 +34,14 @@ export default {};
 
 <style lang="scss" scoped>
 .footer {
-	padding: 25px 0;
+	padding: 25px 0 15px;
 	background: $japanese-laurel-light;
 	border-top: 2px solid $japanese-laurel-light;
 	color: $white;
 	@include animate(background color);
+	@include media('screen', '>=desktop') {
+		padding: 25px 0;
+	}
 
 	.dark-mode & {
 		border-color: $geyser;
@@ -67,6 +70,10 @@ a {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-direction: column;
+	@include media('screen', '>=desktop') {
+		flex-direction: row;
+	}
 }
 
 .social-icons {

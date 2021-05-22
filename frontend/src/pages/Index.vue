@@ -39,7 +39,7 @@
 	query {
 		projects: allProjects(
 			filter: {featured : {eq: true}}
-			limit: 3
+			limit: 5
 		) {
 			edges {
 				node {

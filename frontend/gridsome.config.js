@@ -15,7 +15,7 @@ function addStyleResource(rule) {
 }
 
 module.exports = {
-	siteName: 'Binaya Baral',
+	siteName: 'Binaya Baral | Personal Portfolio',
 	siteUrl: 'https://www.binayabaral.com.np',
 	siteDescription: 'Personal Portfolio of Binaya Baral',
 	icon: './src/favicon.png',

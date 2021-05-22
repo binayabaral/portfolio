@@ -1,32 +1,36 @@
 <template>
 	<div class="project-listing">
 		<span class="h1">Projects</span>
+		<span class="h5" v-if="$route.query.tag">Showing projects with tag: "{{ $route.query.tag }}"</span>
+		<a href="/projects" v-if="$route.query.tag">Clear tag</a>
 		<ul class="projects-list">
-			<li v-for="project in projects" :key="project.node.id">
-				<div class="project__img">
-					<ImageCarousel :images="project.node.screens" :project="project.node.name" />
-				</div>
-				<div class="project__desc">
-					<span class="project__name h3">{{ project.node.name }}</span>
-					<span>Tags:</span>
-					<ul class="project__tags">
-						<li v-for="tag in project.node.tags" :key="tag">
-							<a href="/projects?tag=tag">{{ tag }}</a>
-						</li>
-					</ul>
-					<p>{{ project.node.description }}</p>
-					<div class="project__btn-grp">
-						<a :href="project.node.demo_link" target="_blank" rel="noreferrer" class="btn">
-							<font-awesome :icon="['fa', 'sign-out-alt']" />
-							<span>Demo</span>
-						</a>
-						<a :href="project.node.github_link" target="_blank" rel="noreferrer" class="btn">
-							<font-awesome :icon="['fab', 'github']" />
-							<span>Code</span>
-						</a>
+			<template v-for="project in projects">
+				<li :key="project.node.id" v-if="!$route.query.tag || project.node.tags.includes($route.query.tag)">
+					<div class="project__img">
+						<ImageCarousel :images="project.node.screens" :project="project.node.name" />
 					</div>
-				</div>
-			</li>
+					<div class="project__desc">
+						<span class="project__name h3">{{ project.node.name }}</span>
+						<span>Tags:</span>
+						<ul class="project__tags">
+							<li v-for="tag in project.node.tags" :key="tag">
+								<a :href="'/projects?tag=' + tag">{{ tag }}</a>
+							</li>
+						</ul>
+						<p>{{ project.node.description }}</p>
+						<div class="project__btn-grp">
+							<a :href="project.node.demo_link" target="_blank" rel="noreferrer" class="btn">
+								<font-awesome :icon="['fa', 'sign-out-alt']" />
+								<span>Demo</span>
+							</a>
+							<a :href="project.node.github_link" target="_blank" rel="noreferrer" class="btn">
+								<font-awesome :icon="['fab', 'github']" />
+								<span>Code</span>
+							</a>
+						</div>
+					</div>
+				</li>
+			</template>
 		</ul>
 	</div>
 </template>
@@ -38,11 +42,7 @@ export default {
 	components: {
 		ImageCarousel,
 	},
-	props: {
-		projects: {
-			type: Array,
-		},
-	},
+	props: ['projects'],
 };
 </script>
 
@@ -54,10 +54,30 @@ export default {
 		display: flex;
 		flex-direction: column;
 		padding: 20px 0;
+		border-top: 2px solid $white;
 
 		@include media('screen', '>=desktop') {
 			flex-direction: row;
 			align-items: center;
+			padding: 30px 0;
+		}
+
+		&:first-child {
+			border-top: none;
+		}
+
+		&:nth-child(2n) {
+			.project__img {
+				@include media('screen', '>=desktop') {
+					order: 2;
+					margin-right: 0;
+					margin-left: 30px;
+				}
+			}
+		}
+
+		&.hidden-project {
+			display: none;
 		}
 	}
 }
@@ -76,6 +96,10 @@ export default {
 		img {
 			width: 100%;
 		}
+	}
+
+	&__desc {
+		flex-grow: 1;
 	}
 
 	&__tags {
