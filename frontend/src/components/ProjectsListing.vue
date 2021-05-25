@@ -54,7 +54,12 @@ export default {
 		display: flex;
 		flex-direction: column;
 		padding: 20px 0;
-		border-top: 2px solid $white;
+		border-top: 2px solid $black;
+		@include animate(border-color);
+
+		.dark-mode & {
+			border-color: $white;
+		}
 
 		@include media('screen', '>=desktop') {
 			flex-direction: row;

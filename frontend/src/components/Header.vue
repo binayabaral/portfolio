@@ -35,6 +35,7 @@ export default {
 		darkLightModeToggle: e => {
 			e.preventDefault();
 			document.body.classList.toggle('dark-mode');
+			document.body.classList.toggle('light-mode');
 			const userTheme = localStorage.getItem('userTheme');
 			if (userTheme === 'light-mode') {
 				localStorage.setItem('userTheme', 'dark-mode');
@@ -68,14 +69,18 @@ header {
 	left: 0;
 	right: 0;
 	background: $base-background-color;
-	padding: 15px 0;
+	padding: 5px 0;
 	z-index: 888;
 	border-top: 15px solid $japanese-laurel-light;
 	box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 	@include animate(border-color background box-shadow);
 
+	@include media('screen', '>=tablet') {
+		padding: 15px 0;
+	}
+
 	.dark-mode & {
-		border-color: $elephant;
+		// border-color: $elephant;
 		background: $base-background-color-dark;
 		box-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
 	}

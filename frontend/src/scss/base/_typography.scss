@@ -29,31 +29,49 @@ h6,
 h1,
 .h1 {
 	font-size: $h1-font-size;
+	@include media('screen', '>=desktop') {
+		font-size: $h1-font-size-lg;
+	}
 }
 
 h2,
 .h2 {
 	font-size: $h2-font-size;
+	@include media('screen', '>=desktop') {
+		font-size: $h2-font-size-lg;
+	}
 }
 
 h3,
 .h3 {
 	font-size: $h3-font-size;
+	@include media('screen', '>=desktop') {
+		font-size: $h3-font-size-lg;
+	}
 }
 
 h4,
 .h4 {
 	font-size: $h4-font-size;
+	@include media('screen', '>=desktop') {
+		font-size: $h4-font-size-lg;
+	}
 }
 
 h5,
 .h5 {
 	font-size: $h5-font-size;
+	@include media('screen', '>=desktop') {
+		font-size: $h5-font-size-lg;
+	}
 }
 
 h6,
 .h6 {
 	font-size: $h6-font-size;
+	@include media('screen', '>=desktop') {
+		font-size: $h6-font-size-lg;
+	}
 }
 
 p {

@@ -17,10 +17,6 @@
 							<label for="contact__email">Your email:</label>
 							<input type="email" id="contact__email" name="email" v-model="formData.email" required />
 						</div>
-						<div class="form-grp">
-							<label for="contact__subject">Subject:</label>
-							<input type="text" id="contact__subject" name="name" v-model="formData.subject" required />
-						</div>
 					</div>
 					<div class="form-grp">
 						<label for="contact__message">Message</label>
@@ -63,7 +59,6 @@ export default {
 					alert('Message sent successfully');
 					this.formData.name = '';
 					this.formData.email = '';
-					this.formData.subject = '';
 					this.formData.message = '';
 				})
 				.catch(error => alert(error));
