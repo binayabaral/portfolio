@@ -92,6 +92,7 @@ export default {
 	}
 
 	&__txt {
+		text-align: justify;
 		@include media('screen', '>=tablet') {
 			order: -1;
 		}

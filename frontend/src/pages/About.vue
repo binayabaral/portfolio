@@ -9,7 +9,7 @@
 					<div class="desc">
 						<h1>Binaya Baral</h1>
 						<h5>Web Developer</h5>
-						<p>Hello! I am a web developer specializing in creating everything you need to create and maintain your presence in the digital world.</p>
+						<p>Hello! I am a web developer specializing in creating everything you need to create and maintain your presence in current digital world.</p>
 						<p>Working in this field for over two years now, I have gained meaningful experience in diverse development strategies, tools and techniques that would suit each use case while also helping businesses and individuals create their strong presence in the web.</p>
 					</div>
 				</div>
@@ -98,7 +98,6 @@ h3,
 
 .img {
 	width: 200px;
-	border-radius: 10px;
 	overflow: hidden;
 	flex-shrink: 0;
 	margin-bottom: 20px;
@@ -112,6 +111,10 @@ h3,
 	@include media('screen', '>=desktop') {
 		width: 300px;
 	}
+
+	img {
+		border-radius: 10px;
+	}
 }
 
 .desc {
@@ -120,6 +123,7 @@ h3,
 	flex-grow: 1;
 	padding: 15px 25px;
 	border-radius: 10px;
+	text-align: justify;
 	@include animate(background box-shadow);
 
 	@include media('screen', '>=desktop') {

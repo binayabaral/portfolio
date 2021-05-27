@@ -105,6 +105,7 @@ export default {
 
 	&__desc {
 		flex-grow: 1;
+		text-align: justify;
 	}
 
 	&__tags {

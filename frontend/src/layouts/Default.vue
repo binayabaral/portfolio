@@ -1,9 +1,11 @@
 <template>
 	<div class="layout">
 		<Header />
-		<main>
-			<slot />
-		</main>
+		<transition name="slide-fade" appear>
+			<main>
+				<slot />
+			</main>
+		</transition>
 		<Footer />
 	</div>
 </template>
@@ -53,5 +55,16 @@ main {
 	@include media('screen', '>=tablet') {
 		padding: 160px 0 40px;
 	}
+}
+
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+	@include animate(opacity transform, 0.5s);
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to {
+	opacity: 0;
+	transform: translateY(15px);
 }
 </style>
