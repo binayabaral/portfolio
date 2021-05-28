@@ -49,6 +49,7 @@ module.exports = {
 				themeColor: '#666600',
 				backgroundColor: '#EAF3F8',
 				icon: './src/favicon.png',
+				maskableIcon: true,
 			},
 		},
 	],

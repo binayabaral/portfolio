@@ -5,7 +5,7 @@
 $gray: #999;
 $black: #333;
 $white: #fff;
-$japanese-laurel: #006000;
+$japanese-laurel: #005000;
 $japanese-laurel-light: #009000;
 $black-squeeze: #eaf3f8;
 $mystic: #e2e8f0;
@@ -36,9 +36,9 @@ $vertical-rhythm: ($line-height-base * 1em);
 $base-min-width: 320px;
 
 // Liks
-$base-link-color: $japanese-laurel;
-$base-link-color-dark: $japanese-laurel;
-$link-hover-color: $japanese-laurel;
+$base-link-color: $japanese-laurel-light;
+$base-link-color-dark: $japanese-laurel-light;
+$link-hover-color: $japanese-laurel-light;
 
 // Buttons
 $btn-color: $white;
