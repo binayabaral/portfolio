@@ -19,7 +19,7 @@ module.exports = {
 	siteUrl: 'https://www.binayabaral.com.np',
 	siteDescription: 'Personal Portfolio of Binaya Baral',
 	icon: './src/favicon.png',
-	plugins: [],
+	plugins: ['@gridsome/plugin-sitemap', 'gridsome-plugin-robots-txt'],
 	chainWebpack(config) {
 		// Load variables for all vue-files
 		const types = ['vue-modules', 'vue', 'normal-modules', 'normal'];
