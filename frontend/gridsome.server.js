@@ -19,7 +19,7 @@ module.exports = function(api) {
 			let projectTags = [];
 
 			for (const screen of project.screen) {
-				projectScreens.push(screen.formats.large.url);
+				projectScreens.push(screen.formats.medium.url);
 			}
 
 			for (const tag of project.project_tags) {
