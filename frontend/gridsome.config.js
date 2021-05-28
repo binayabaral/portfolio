@@ -19,7 +19,39 @@ module.exports = {
 	siteUrl: 'https://www.binayabaral.com.np',
 	siteDescription: 'Personal Portfolio of Binaya Baral',
 	icon: './src/favicon.png',
-	plugins: ['@gridsome/plugin-sitemap', 'gridsome-plugin-robots-txt'],
+	plugins: [
+		'@gridsome/plugin-sitemap',
+		'gridsome-plugin-robots-txt',
+		{
+			use: 'gridsome-plugin-manifest',
+			options: {
+				background_color: '#EAF3F8',
+				icon_path: './src/favicon.png',
+				name: 'Binaya Baral | Personal Portfolio',
+				short_name: 'Binaya Baral',
+				theme_color: '#FFFFFF',
+				lang: 'en',
+			},
+		},
+		{
+			use: 'gridsome-plugin-pwa',
+			options: {
+				disableServiceWorker: false,
+				serviceWorkerPath: 'service-worker.js',
+				cachedFileTypes: 'js,json,css,html,png,jpg,jpeg,svg,gif',
+				disableTemplatedUrls: false, // Optional
+
+				manifestPath: 'manifest.json',
+				title: 'Binaya Baral | Personal Portfolio',
+				startUrl: '/',
+				display: 'standalone',
+				statusBarStyle: 'default',
+				themeColor: '#666600',
+				backgroundColor: '#EAF3F8',
+				icon: './src/favicon.png',
+			},
+		},
+	],
 	chainWebpack(config) {
 		// Load variables for all vue-files
 		const types = ['vue-modules', 'vue', 'normal-modules', 'normal'];
