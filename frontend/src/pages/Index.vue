@@ -10,7 +10,7 @@
 					<h2>I'm Binaya Baral</h2>
 					<span class="h3">A developer specializing in creating everything you need to create and maintain your presence in the digital world.</span>
 					<p>Over the last 2 years, I gained meaningful experience in diverse development strategies through mixed approaches based on Design, Thinking and Development using various technologies that would suit each use case while also helping businesses and individuals create their strong presence in the modern day web.</p>
-					<p>For the past 2 years, I have been working as a web developer at Rapid Web Solutions.</p>
+					<p>Currently, I am working as an Associate Software Engineer at Leapfrog Technology, Inc.</p>
 					<g-link to="/about" class="btn">Explore Me</g-link>
 				</div>
 			</div>

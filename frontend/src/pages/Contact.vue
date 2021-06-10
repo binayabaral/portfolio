@@ -25,7 +25,7 @@
 					<div class="form-grp">
 						<div data-netlify-recaptcha="true"></div>
 					</div>
-					<button type="submit" class="btn">Submit form</button>
+					<button type="submit" class="btn">Submit</button>
 				</form>
 			</div>
 		</section>

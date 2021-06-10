@@ -41,7 +41,9 @@
 							<h3>Skills and Abilities</h3>
 							<ul class="skills-list">
 								<li>Familiar to front-end development using Reactjs, Redux and Vuejs.</li>
+								<li>Familiar to Nodejs and Express.</li>
 								<li>Pixel-perfect design-to-development using HTML5, CSS3, jQuery and/or ES6 vanilla js.</li>
+								<li>Game Development using HTML5 Canvas and Javascript.</li>
 								<li>Familiar with C# and .NET framework.</li>
 								<li>Acquainted with python programming Language.</li>
 								<li>Proficient in C and C++ programming languages.</li>
@@ -72,7 +74,7 @@ export default {
 		title: 'About Me',
 	},
 	data: () => ({
-		experiences: [{ id: 1, companyName: 'Rapid Web Solutions', position: 'Front End Developer', timePeriod: 'September 2019 - Present' }],
+		experiences: [{ id: 1, companyName: 'Leapfrog Technology, Inc.', position: 'Associate Software Engineer', timePeriod: 'June 2021 - Present' }, { id: 2, companyName: 'Rapid Web Solutions', position: 'Front End Developer', timePeriod: 'September 2019 - June 2021' }],
 		education: [{ id: 3, name: 'Kantipur Engineering College, Dhapakhel, Lalitpur', year: '2021', concentration: 'Bachelor of Engineering: Computer Engineering' }, { id: 2, name: "St. Xavier's College, Maitighar, Kathmandu", year: '2016', concentration: '10 + 2. Science Faculty' }, { id: 1, name: 'Bright Future Higher Secondary School, Satdobato, Lalitpur', year: '2014', concentration: 'SLC' }],
 	}),
 };
