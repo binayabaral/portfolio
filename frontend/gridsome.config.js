@@ -39,8 +39,7 @@ module.exports = {
 				disableServiceWorker: false,
 				serviceWorkerPath: 'service-worker.js',
 				cachedFileTypes: 'js,json,css,html,png,jpg,jpeg,svg,gif',
-				disableTemplatedUrls: false, // Optional
-
+				disableTemplatedUrls: false,
 				manifestPath: 'manifest.json',
 				title: 'Binaya Baral | Personal Portfolio',
 				startUrl: '/',
@@ -49,6 +48,8 @@ module.exports = {
 				themeColor: '#666600',
 				backgroundColor: '#EAF3F8',
 				icon: './src/favicon.png',
+				shortName: 'Binaya Baral',
+				description: 'Personal Portfolio of Binaya Baral',
 				maskableIcon: true,
 			},
 		},

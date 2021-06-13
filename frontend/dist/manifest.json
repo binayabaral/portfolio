@@ -1,6 +1,7 @@
 {
   "name": "Binaya Baral | Personal Portfolio",
-  "short_name": "Gridsome",
+  "short_name": "Binaya Baral",
+  "description": "Personal Portfolio of Binaya Baral",
   "start_url": "/",
   "display": "standalone",
   "theme_color": "#666600",
