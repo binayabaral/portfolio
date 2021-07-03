@@ -14,11 +14,11 @@ config.autoAddCss = false;
 library.add(faGithub, faTwitter, faInstagram, faFacebook, faAdjust, faSignOutAlt);
 
 export default function(Vue, { router, head, isClient }) {
-	head.link.push({
-		rel: 'stylesheet',
-		href: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Nunito+Sans:wght@400;600&display=swap',
-	});
-	// Set default layout as a global component
-	Vue.component('Layout', DefaultLayout);
-	Vue.component('font-awesome', FontAwesomeIcon);
+  head.link.push({
+    rel: 'stylesheet',
+    href: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Nunito+Sans:wght@400;600&display=swap',
+  });
+  // Set default layout as a global component
+  Vue.component('Layout', DefaultLayout);
+  Vue.component('font-awesome', FontAwesomeIcon);
 }

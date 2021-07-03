@@ -1,11 +1,11 @@
 <template>
-	<Layout>
-		<section class="projects">
-			<div class="container">
-				<ProjectsListing :projects="projects" />
-			</div>
-		</section>
-	</Layout>
+  <Layout>
+    <section class="projects">
+      <div class="container">
+        <ProjectsListing :projects="projects" />
+      </div>
+    </section>
+  </Layout>
 </template>
 
 <page-query>
@@ -33,17 +33,17 @@
 import ProjectsListing from '../components/ProjectsListing';
 
 export default {
-	metaInfo: {
-		title: 'My Projects',
-	},
-	components: {
-		ProjectsListing,
-	},
-	data: () => ({
-		projects: [],
-	}),
-	mounted() {
-		this.projects = this.$page.projects.edges;
-	},
+  metaInfo: {
+    title: 'My Projects',
+  },
+  components: {
+    ProjectsListing,
+  },
+  data: () => ({
+    projects: [],
+  }),
+  mounted() {
+    this.projects = this.$page.projects.edges;
+  },
 };
 </script>
