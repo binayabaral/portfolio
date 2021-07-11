@@ -57,6 +57,45 @@ export default {
   metaInfo() {
     return {
       title: this.$page.blogs.title,
+      meta: [
+        { key: 'og:type', property: 'og:type', content: 'article' },
+        {
+          key: 'og:title',
+          property: 'og:title',
+          content: this.$page.blogs.title,
+        },
+        {
+          key: 'description',
+          name: 'description',
+          content: this.$page.blogs.description,
+        },
+        { key: 'og:url', property: 'og:url', content: `https://www.binayabaral.com${this.$page.blogs.path}` },
+        { property: 'og:image', content: this.$page.blogs.bannerImage },
+        { property: 'og:image:secure_url', content: this.$page.blogs.bannerImage },
+        { key: 'keywords', name: 'keywords', content: this.$page.blogs.tags },
+        {
+          key: 'article:published_time',
+          property: 'article:published_time',
+          content: this.$page.blogs.published_at,
+        },
+        { name: 'twitter:title', content: this.$page.blogs.title },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        {
+          name: 'twitter:description',
+          content: this.$page.blogs.description,
+        },
+
+        {
+          name: 'twitter:site',
+          content: 'https://twitter.com/binayabaral',
+        },
+        {
+          name: 'twitter:creator',
+          content: 'https://twitter.com/binayabaral',
+        },
+        { name: 'twitter:image', content: this.$page.blogs.bannerImage },
+      ],
+      script: [{ src: 'https://platform.twitter.com/widgets.js', async: true }],
     };
   },
   components: {
