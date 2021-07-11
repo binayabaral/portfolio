@@ -68,6 +68,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.contact {
+  padding-bottom: 40px;
+}
+
 form {
   max-width: 700px;
   margin: 0 auto;

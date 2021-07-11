@@ -24,6 +24,15 @@
         </div>
       </div>
     </section>
+    <section class="recent-blogs">
+      <div class="container">
+        <span class="recent-blogs__title">Recent Works</span>
+        <BlogsListing :blogs="blogs" />
+        <div class="text-center">
+          <g-link to="/blogs" class="btn view-all-btn">View all Blogs</g-link>
+        </div>
+      </div>
+    </section>
     <section class="work-together">
       <div class="container">
         <h1>Contact Me:</h1>
@@ -39,7 +48,7 @@
 	query {
 		projects: allProjects(
 			filter: {featured : {eq: true}}
-			limit: 6
+			limit: 5
 		) {
 			edges {
 				node {
@@ -54,12 +63,30 @@
 				}
 			}
 		}
+    blogs: allBlogs(
+      limit: 5
+    ) {
+      edges {
+        node {
+          id
+					title,
+          description,
+          content,
+          path,
+          published_at,
+          thumbnail,
+          bannerImage,
+          tags
+        }
+      }
+    }
 	}
 
 </page-query>
 
 <script>
 import ProjectListing from '../components/ProjectsListing';
+import BlogsListing from '../components/BlogsListing.vue';
 
 export default {
   metaInfo: {
@@ -67,17 +94,29 @@ export default {
   },
   components: {
     ProjectListing,
+    BlogsListing,
   },
   data: () => ({
     projects: [],
+    blogs: [],
   }),
   mounted() {
     this.projects = this.$page.projects.edges;
+    this.blogs = this.$page.blogs.edges;
   },
 };
 </script>
 
 <style lang="scss" scoped>
+section {
+  &:nth-child(2n) {
+    background: $mystic;
+    @include animate(background);
+    .dark-mode & {
+      background: $base-background-color-dark;
+    }
+  }
+}
 .intro {
   padding-bottom: 50px;
 
@@ -123,16 +162,11 @@ a {
   margin-top: 10px;
 }
 
-.recent-projects {
+.recent-projects,
+.recent-blogs {
   padding: 40px 0;
-  background: $mystic;
   border-top: 2px solid $mystic;
   border-bottom: 2px solid $mystic;
-  @include animate(background);
-
-  .dark-mode & {
-    background: $base-background-color-dark;
-  }
 }
 
 .work-together {

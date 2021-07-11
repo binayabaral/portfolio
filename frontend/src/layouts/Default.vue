@@ -51,9 +51,9 @@ export default {
 
 main {
   flex-grow: 1;
-  padding: 80px 0 40px;
+  padding: 80px 0 0;
   @include media('screen', '>=tablet') {
-    padding: 95px 0 40px;
+    padding: 95px 0 0;
   }
 }
 

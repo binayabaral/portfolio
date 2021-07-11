@@ -48,3 +48,9 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.blogs {
+  padding-bottom: 40px;
+}
+</style>

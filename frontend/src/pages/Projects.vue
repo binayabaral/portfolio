@@ -47,3 +47,9 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.projects {
+  padding-bottom: 40px;
+}
+</style>
