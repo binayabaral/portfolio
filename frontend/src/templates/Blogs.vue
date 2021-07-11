@@ -18,10 +18,10 @@
         <div class="blog__share">
           <span class="blog__share-title">Share to:</span>
           <div class="blog__share-options">
-            <ShareNetwork network="facebook" :url="`https://binayabaral.com.np${$page.blogs.path}`" :title="$page.blogs.title" :description="$page.blogs.description" aria-labelledby="share to facebook">
+            <ShareNetwork network="facebook" :url="`https://binayabaral.com.np${$page.blogs.path}`" :title="$page.blogs.title" :description="$page.blogs.description" aria-label="share to facebook">
               <font-awesome :icon="['fab', 'facebook']" />
             </ShareNetwork>
-            <ShareNetwork network="twitter" :url="`https://binayabaral.com.np${$page.blogs.path}`" :title="$page.blogs.title" :description="$page.blogs.description" aria-labelledby="share to twitter">
+            <ShareNetwork network="twitter" :url="`https://binayabaral.com.np${$page.blogs.path}`" :title="$page.blogs.title" :description="$page.blogs.description" aria-label="share to twitter">
               <font-awesome :icon="['fab', 'twitter']" />
             </ShareNetwork>
           </div>
