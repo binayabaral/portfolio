@@ -1,7 +1,9 @@
 <template>
   <Layout>
     <section class="blog">
-      <div class="blog__banner" :style="{ backgroundImage: `url(${$page.blogs.bannerImage})` }"></div>
+      <div class="blog__banner">
+        <img :src="$page.blogs.bannerImage" :alt="$page.blogs.title" />
+      </div>
       <div class="container">
         <h1 class="blog__title">{{ $page.blogs.title }}</h1>
         <span class="published_at">Published on: {{ new Date($page.blogs.published_at).toDateString() }}</span>
@@ -51,62 +53,8 @@ query($path: String) {
 <script>
 import VueMarkdown from 'vue-markdown';
 import { ShareNetwork } from 'vue-social-sharing';
-import shajs from 'sha.js';
 export default {
   metaInfo() {
-    let meta = [
-      {
-        property: 'charset',
-        name: 'charset',
-        content: 'utf-8',
-      },
-      {
-        property: 'og:type',
-        name: 'og:type',
-        content: 'article',
-      },
-      {
-        name: 'twitter:site',
-        key: 'twitter:site',
-        content: '@binayabaral',
-      },
-      {
-        name: 'twitter:title',
-        key: 'twitter:title',
-        content: this.$page.blogs.title,
-      },
-    ];
-
-    meta.push(
-      ...[{ name: 'description', tag: 'name' }, { name: 'og:description', tag: 'property' }, { name: 'twitter:description', tag: 'name' }].map(prop => ({
-        [prop.tag]: prop.name,
-        key: prop.name,
-        content: this.$page.blogs.description,
-      }))
-    );
-
-    const pageURL = encodeURI(
-      `https://binayabaral.com.np${this.$page.blogs.path}?v=${shajs('sha256')
-        .update(this.$page.blogs.content)
-        .digest('hex')}`
-    );
-
-    const socialImage = this.$page.blogs.bannerImage || `https://motif.imgix.com/i?url=${pageURL})}&color=e63946&logo_url=https%3A%2F%2Flogo.clearbit.com%2Fbinayabaral.com.np%3Fformat%3Dpng%26size%3D300&logo_alignment=bottom%2Cright&text_alignment=top%2Cleft&logo_padding=0&font_family=Avenir%20Next%20Demi%2CBold&text_color=fff`;
-
-    meta.push(
-      ...[{ name: 'image', tag: 'name' }, { name: 'twitter:image', tag: 'name' }, { name: 'og:image', tag: 'property' }].map(prop => ({
-        [prop.tag]: prop.name,
-        key: prop.name,
-        content: socialImage,
-      }))
-    );
-
-    meta.push({
-      name: 'twitter:card',
-      key: 'twitter:card',
-      content: 'summary_large_image',
-    });
-
     return {
       title: this.$page.blogs.title,
     };
@@ -127,9 +75,13 @@ h1,
 .blog {
   &__banner {
     height: 50vh;
-    background-size: cover;
-    background-position: 50% 50%;
     margin-bottom: 10px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &__title {
