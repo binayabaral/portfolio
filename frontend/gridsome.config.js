@@ -15,7 +15,7 @@ function addStyleResource(rule) {
 }
 
 module.exports = {
-  siteName: 'Binaya Baral | Personal Portfolio',
+  siteName: 'binayabaral.com.np',
   siteUrl: 'https://www.binayabaral.com.np',
   siteDescription: 'Personal Portfolio of Binaya Baral',
   icon: './src/favicon.png',
@@ -27,7 +27,7 @@ module.exports = {
       options: {
         background_color: '#EAF3F8',
         icon_path: './src/favicon.png',
-        name: 'Binaya Baral | Personal Portfolio',
+        name: 'Binaya Baral',
         short_name: 'Binaya Baral',
         theme_color: '#FFFFFF',
         lang: 'en',
@@ -41,7 +41,7 @@ module.exports = {
         cachedFileTypes: 'js,json,css,html,png,jpg,jpeg,svg,gif',
         disableTemplatedUrls: false,
         manifestPath: 'manifest.json',
-        title: 'Binaya Baral | Personal Portfolio',
+        title: 'Binaya Baral',
         startUrl: '/',
         display: 'standalone',
         statusBarStyle: 'default',

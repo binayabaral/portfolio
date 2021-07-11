@@ -16,10 +16,10 @@
         <div class="blog__share">
           <span class="blog__share-title">Share to:</span>
           <div class="blog__share-options">
-            <ShareNetwork network="facebook" :url="`https://binayabaral.com.np${$page.blogs.path}`" :title="$page.blogs.title" :description="$page.blogs.description">
+            <ShareNetwork network="facebook" :url="`https://binayabaral.com.np${$page.blogs.path}`" :title="$page.blogs.title" :description="$page.blogs.description" aria-labelledby="share to facebook">
               <font-awesome :icon="['fab', 'facebook']" />
             </ShareNetwork>
-            <ShareNetwork network="twitter" :url="`https://binayabaral.com.np${$page.blogs.path}`" :title="$page.blogs.title" :description="$page.blogs.description">
+            <ShareNetwork network="twitter" :url="`https://binayabaral.com.np${$page.blogs.path}`" :title="$page.blogs.title" :description="$page.blogs.description" aria-labelledby="share to twitter">
               <font-awesome :icon="['fab', 'twitter']" />
             </ShareNetwork>
           </div>
@@ -51,8 +51,62 @@ query($path: String) {
 <script>
 import VueMarkdown from 'vue-markdown';
 import { ShareNetwork } from 'vue-social-sharing';
+import shajs from 'sha.js';
 export default {
   metaInfo() {
+    let meta = [
+      {
+        property: 'charset',
+        name: 'charset',
+        content: 'utf-8',
+      },
+      {
+        property: 'og:type',
+        name: 'og:type',
+        content: 'article',
+      },
+      {
+        name: 'twitter:site',
+        key: 'twitter:site',
+        content: '@binayabaral',
+      },
+      {
+        name: 'twitter:title',
+        key: 'twitter:title',
+        content: this.$page.blogs.title,
+      },
+    ];
+
+    meta.push(
+      ...[{ name: 'description', tag: 'name' }, { name: 'og:description', tag: 'property' }, { name: 'twitter:description', tag: 'name' }].map(prop => ({
+        [prop.tag]: prop.name,
+        key: prop.name,
+        content: this.$page.blogs.description,
+      }))
+    );
+
+    const pageURL = encodeURI(
+      `https://binayabaral.com.np${this.$page.blogs.path}?v=${shajs('sha256')
+        .update(this.$page.blogs.content)
+        .digest('hex')}`
+    );
+
+    const socialImage = this.$page.blogs.bannerImage || `https://motif.imgix.com/i?url=${pageURL})}&color=e63946&logo_url=https%3A%2F%2Flogo.clearbit.com%2Fbinayabaral.com.np%3Fformat%3Dpng%26size%3D300&logo_alignment=bottom%2Cright&text_alignment=top%2Cleft&logo_padding=0&font_family=Avenir%20Next%20Demi%2CBold&text_color=fff`;
+
+    meta.push(
+      ...[{ name: 'image', tag: 'name' }, { name: 'twitter:image', tag: 'name' }, { name: 'og:image', tag: 'property' }].map(prop => ({
+        [prop.tag]: prop.name,
+        key: prop.name,
+        content: socialImage,
+      }))
+    );
+
+    meta.push({
+      name: 'twitter:card',
+      key: 'twitter:card',
+      content: 'summary_large_image',
+    });
+
     return {
       title: this.$page.blogs.title,
     };
