@@ -11,12 +11,14 @@
           </div>
           <div class="project__desc">
             <span class="project__name h3">{{ project.node.name }}</span>
-            <span>Tags:</span>
-            <ul class="project__tags">
-              <li v-for="tag in project.node.tags" :key="tag">
-                <a :href="'/projects?tag=' + tag">{{ tag }}</a>
-              </li>
-            </ul>
+            <div class="project__tags-wrap" v-if="project.node.tags.length">
+              <span class="project__tags-title">Tags:</span>
+              <ul class="project__tags">
+                <li v-for="tag in project.node.tags" :key="tag">
+                  <a :href="'/projects?tag=' + tag">{{ tag }}</a>
+                </li>
+              </ul>
+            </div>
             <p>{{ project.node.description }}</p>
             <div class="project__btn-grp">
               <a :href="project.node.demo_link" target="_blank" rel="noreferrer" class="btn">
@@ -53,7 +55,7 @@ export default {
   > li {
     display: flex;
     flex-direction: column;
-    padding: 20px 0;
+    padding: 15px 0;
     border-top: 2px solid $black;
     @include animate(border-color);
 
@@ -64,7 +66,7 @@ export default {
     @include media('screen', '>=desktop') {
       flex-direction: row;
       align-items: center;
-      padding: 30px 0;
+      padding: 20px 0;
     }
 
     &:first-child {
@@ -108,28 +110,50 @@ export default {
     text-align: justify;
   }
 
+  &__tags-wrap {
+    padding-bottom: 15px;
+    display: flex;
+  }
+
+  &__tags-title {
+    margin-right: 10px;
+  }
+
+  &__tags-title {
+    margin-right: 10px;
+  }
+
   &__tags {
     @extend %listreset;
     display: flex;
+    flex-wrap: wrap;
     margin: 0 -10px;
-    padding-bottom: 15px;
 
     li {
       margin: 0 10px;
     }
   }
 
+  &__name {
+    margin-bottom: 5px;
+    text-transform: capitalize;
+  }
+
   &__btn-grp {
     margin: 0 -10px;
-    @include media('screen', '>=desktop') {
-      padding-top: 15px;
-    }
     .btn {
       margin: 5px 10px;
     }
-    span {
-      margin-left: 10px;
+    svg {
+      margin-right: 10px;
     }
   }
+}
+
+h1,
+.h1,
+h5,
+.h5 {
+  margin-bottom: 0;
 }
 </style>

@@ -14,8 +14,8 @@
       "type": "string"
     },
     "blogs": {
-      "collection": "blog",
       "via": "blog_tags",
+      "collection": "blog",
       "dominant": true
     }
   }

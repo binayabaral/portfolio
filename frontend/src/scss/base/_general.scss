@@ -5,11 +5,13 @@
 }
 
 .btn {
+  display: inline-block;
+  vertical-align: middle;
   text-align: center;
   background: $base-link-color;
   color: $white !important;
   text-decoration: none;
-  padding: 7px 20px;
+  padding: 5px 15px;
   border-radius: 3px;
   border: none;
   @include animate(background);
@@ -34,4 +36,15 @@
 
 .text-center {
   text-align: center;
+}
+
+pre {
+  background: $geyser;
+  overflow-x: auto;
+  padding: 15px;
+  @include animate(background);
+
+  .dark-mode & {
+    background: $black;
+  }
 }

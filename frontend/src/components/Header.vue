@@ -22,7 +22,7 @@
 <script>
 export default {
   data: () => ({
-    navLinks: [{ to: '/about', linkName: 'About' }, { to: '/projects', linkName: 'Projects' }, { to: '/contact', linkName: 'Contact' }],
+    navLinks: [{ to: '/about', linkName: 'About' }, { to: '/projects', linkName: 'Projects' }, { to: '/blogs', linkName: 'Blogs' }, { to: '/contact', linkName: 'Contact' }],
     navExpanded: false,
   }),
   mounted() {
@@ -71,13 +71,9 @@ header {
   background: $base-background-color;
   padding: 5px 0;
   z-index: 888;
-  border-top: 15px solid $japanese-laurel-light;
+  border-top: 10px solid $japanese-laurel-light;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
   @include animate(border-color background box-shadow);
-
-  @include media('screen', '>=tablet') {
-    padding: 15px 0;
-  }
 
   .dark-mode & {
     // border-color: $elephant;
@@ -96,10 +92,14 @@ header {
   display: block;
   flex-shrink: 0;
   font-family: $secondary-font-sans-serif;
-  font-size: 60px;
+  font-size: 30px;
   color: $japanese-laurel-light !important;
   font-weight: 400;
   margin-right: 30px;
+
+  @include media('screen', '>=tablet') {
+    font-size: 40px;
+  }
 
   &:hover,
   &.active--exact.active {
@@ -130,7 +130,7 @@ a {
 #nav {
   flex-grow: 1;
   position: absolute;
-  top: calc(100% - 20px);
+  top: 100%;
   left: 0;
   right: 0;
   padding: 10px 20px;
@@ -201,8 +201,8 @@ a {
   outline: none !important;
   padding: 0;
 
-  width: 30px;
-  height: 25px;
+  width: 25px;
+  height: 20px;
   position: relative;
   z-index: 0;
 

@@ -8,13 +8,19 @@ const axios = require('axios');
 
 module.exports = function(api) {
   api.loadSource(async actions => {
-    const { data } = await axios.get('http://localhost:1337/projects');
+    const { data: projectsData } = await axios.get('http://localhost:1337/projects');
+    const { data: blogsData } = await axios.get('http://localhost:1337/blogs');
 
-    const collection = actions.addCollection({
+    const projectsCollection = actions.addCollection({
       typeName: 'Projects',
     });
 
-    for (const project of data) {
+    const blogsCollection = actions.addCollection({
+      typeName: 'Blogs',
+      path: '/blogs/:slug',
+    });
+
+    for (const project of projectsData) {
       let projectScreens = [];
       let projectTags = [];
 
@@ -26,7 +32,7 @@ module.exports = function(api) {
         projectTags.push(tag.tag);
       }
 
-      collection.addNode({
+      projectsCollection.addNode({
         id: project.id,
         name: project.name,
         description: project.description,
@@ -35,6 +41,26 @@ module.exports = function(api) {
         featured: project.featured,
         screens: projectScreens,
         tags: projectTags,
+      });
+    }
+
+    for (const blog of blogsData) {
+      let blogTags = [];
+
+      for (const tag of blog.blog_tags) {
+        blogTags.push(tag.tag);
+      }
+
+      blogsCollection.addNode({
+        id: blog.id,
+        title: blog.title,
+        description: blog.description,
+        content: blog.content,
+        path: `/blogs/${blog.slug}`,
+        published_at: blog.published_at,
+        thumbnail: blog.bannerImage.formats.small.url,
+        bannerImage: blog.bannerImage.formats.large.url,
+        tags: blogTags,
       });
     }
   });

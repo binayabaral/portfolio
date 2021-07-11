@@ -38,7 +38,7 @@ export default {};
   background: $japanese-laurel-light;
   border-top: 2px solid $japanese-laurel-light;
   color: $white;
-  @include animate(background color);
+  @include animate(background color border-color);
   @include media('screen', '>=desktop') {
     padding: 25px 0;
   }
