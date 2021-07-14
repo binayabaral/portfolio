@@ -11,7 +11,7 @@
           <span class="h3">A developer specializing in creating everything you need to create and maintain your presence in the digital world.</span>
           <p>Over the last 2 years, I gained meaningful experience in diverse development strategies through mixed approaches based on Design, Thinking and Development using various technologies that would suit each use case while also helping businesses and individuals create their strong presence in the modern day web.</p>
           <p>Currently, I am working as an Associate Software Engineer at Leapfrog Technology, Inc.</p>
-          <g-link to="/about" class="btn">Explore Me</g-link>
+          <g-link to="/about/" class="btn">Explore Me</g-link>
         </div>
       </div>
     </section>
@@ -20,7 +20,7 @@
         <span class="recent-projects__title">Recent Works</span>
         <ProjectListing :projects="projects" />
         <div class="text-center">
-          <g-link to="/projects" class="btn view-all-btn">View all projects</g-link>
+          <g-link to="/projects/" class="btn view-all-btn">View all projects</g-link>
         </div>
       </div>
     </section>
@@ -29,7 +29,7 @@
         <span class="recent-blogs__title">Recent Works</span>
         <BlogsListing :blogs="blogs" />
         <div class="text-center">
-          <g-link to="/blogs" class="btn view-all-btn">View all Blogs</g-link>
+          <g-link to="/blogs/" class="btn view-all-btn">View all Blogs</g-link>
         </div>
       </div>
     </section>
@@ -37,7 +37,7 @@
       <div class="container">
         <h1>Contact Me:</h1>
         <p>If you are interested, you can contact me for futher information.</p>
-        <g-link to="/contact" class="btn">Contact</g-link>
+        <g-link to="/contact/" class="btn">Contact</g-link>
       </div>
     </section>
   </Layout>

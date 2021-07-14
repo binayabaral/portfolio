@@ -2,7 +2,7 @@
   <div class="project-listing">
     <span class="h1">Projects</span>
     <span class="h5" v-if="$route.query.tag">Showing projects with tag: "{{ $route.query.tag }}"</span>
-    <g-link to="/projects" v-if="$route.query.tag">Clear tag</g-link>
+    <g-link to="/projects/" v-if="$route.query.tag">Clear tag</g-link>
     <ul class="projects-list">
       <template v-for="project in projects">
         <li :key="project.node.id" v-if="!$route.query.tag || project.node.tags.includes($route.query.tag)">
@@ -15,7 +15,7 @@
               <span class="project__tags-title">Tags:</span>
               <ul class="project__tags">
                 <li v-for="tag in project.node.tags" :key="tag">
-                  <g-link :to="'/projects?tag=' + tag">{{ tag }}</g-link>
+                  <g-link :to="'/projects/?tag=' + tag">{{ tag }}</g-link>
                 </li>
               </ul>
             </div>

@@ -2,7 +2,7 @@
   <div class="blog-listing">
     <span class="h1">Blogs</span>
     <span class="h5" v-if="$route.query.tag">Showing blogs with tag: "{{ $route.query.tag }}"</span>
-    <g-link to="/blogs" v-if="$route.query.tag">Clear tag</g-link>
+    <g-link to="/blogs/" v-if="$route.query.tag">Clear tag</g-link>
     <ul class="blogs-list">
       <template v-for="blog in blogs">
         <li :key="blog.node.id" v-if="!$route.query.tag || blog.node.tags.includes($route.query.tag)">
@@ -15,7 +15,7 @@
               <span class="blog__tags-title">Tags:</span>
               <ul class="blog__tags">
                 <li v-for="tag in blog.node.tags" :key="tag">
-                  <g-link :to="'/blogs?tag=' + tag">{{ tag }}</g-link>
+                  <g-link :to="'/blogs/?tag=' + tag">{{ tag }}</g-link>
                 </li>
               </ul>
             </div>

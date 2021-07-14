@@ -22,7 +22,7 @@
 <script>
 export default {
   data: () => ({
-    navLinks: [{ to: '/about', linkName: 'About' }, { to: '/projects', linkName: 'Projects' }, { to: '/blogs', linkName: 'Blogs' }, { to: '/contact', linkName: 'Contact' }],
+    navLinks: [{ to: '/about/', linkName: 'About' }, { to: '/projects/', linkName: 'Projects' }, { to: '/blogs/', linkName: 'Blogs' }, { to: '/contact/', linkName: 'Contact' }],
     navExpanded: false,
   }),
   mounted() {

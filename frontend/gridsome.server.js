@@ -17,7 +17,7 @@ module.exports = function(api) {
 
     const blogsCollection = actions.addCollection({
       typeName: 'Blogs',
-      path: '/blogs/:slug',
+      path: '/blogs/:slug/',
     });
 
     for (const project of projectsData) {
@@ -56,7 +56,7 @@ module.exports = function(api) {
         title: blog.title,
         description: blog.description,
         content: blog.content,
-        path: `/blogs/${blog.slug}`,
+        path: `/blogs/${blog.slug}/`,
         published_at: blog.published_at,
         thumbnail: blog.bannerImage.formats.small.url,
         bannerImage: blog.bannerImage.formats.large.url,

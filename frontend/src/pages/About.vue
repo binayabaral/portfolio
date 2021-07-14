@@ -62,7 +62,7 @@
       <div class="container">
         <h1>Let's Connect:</h1>
         <p>If you are interested, you can contact me for futher information.</p>
-        <g-link to="/contact" class="btn">Contact</g-link>
+        <g-link to="/contact/" class="btn">Contact</g-link>
       </div>
     </section>
   </Layout>
