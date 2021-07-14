@@ -1,10 +1,7 @@
 <template>
   <Layout>
     <section class="blog">
-      <div class="blog__banner">
-        <img :src="$page.blogs.bannerImage" :alt="$page.blogs.title" />
-      </div>
-      <div class="container">
+      <div class="blog__container">
         <h1 class="blog__title">{{ $page.blogs.title }}</h1>
         <span class="published_at">Published on: {{ new Date($page.blogs.published_at).toDateString() }}</span>
         <div class="blog__tags-wrap" v-if="$page.blogs.tags.length">
@@ -25,6 +22,9 @@
               <font-awesome :icon="['fab', 'twitter']" />
             </ShareNetwork>
           </div>
+        </div>
+        <div class="blog__banner">
+          <img :src="$page.blogs.bannerImage" :alt="$page.blogs.title" />
         </div>
         <div class="blog__content">
           <vue-markdown>{{ $page.blogs.content }}</vue-markdown>
@@ -113,8 +113,9 @@ h1,
 
 .blog {
   &__banner {
-    height: 50vh;
-    margin-bottom: 10px;
+    width: 100%;
+    height: 40vh;
+    margin-bottom: 20px;
 
     img {
       width: 100%;
@@ -151,10 +152,10 @@ h1,
     }
   }
 
-  &__content {
-    @include media('screen', '>=tablet') {
-      padding: 50px 100px;
-    }
+  &__container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
   }
 }
 </style>
@@ -171,6 +172,7 @@ h1,
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 10px;
   }
 
   &__share-title {
@@ -178,11 +180,17 @@ h1,
   }
 
   &__share-options {
-    font-size: 40px;
+    font-size: 25px;
+    @include media('screen', '>=desktop') {
+      font-size: 40px;
+    }
 
     a {
-      margin: 15px;
       color: $base-text-color;
+      margin: 8px;
+      @include media('screen', '>=desktop') {
+        margin: 15px;
+      }
 
       .dark-mode & {
         color: $base-text-color-dark;
