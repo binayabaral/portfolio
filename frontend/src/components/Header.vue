@@ -2,7 +2,7 @@
   <header id="header">
     <div class="container">
       <g-link to="/" class="logo">3!ηα¥</g-link>
-      <a href="#" class="nav-opener" @click="toggleNav" :class="{ 'nav-active': navExpanded }" aria-labelledby="navigation menu opener"><span></span></a>
+      <a href="#" class="nav-opener" @click="toggleNav" :class="{ 'nav-active': navExpanded }" aria-label="navigation menu opener"><span></span></a>
       <nav id="nav" :class="{ 'show-nav': navExpanded }">
         <ul class="navigation-menu">
           <li v-for="navLink in navLinks" :key="navLink.linkName">

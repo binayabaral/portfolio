@@ -6,7 +6,7 @@
           <span class="not-found__status">404</span>
           <span class="not-found__msg">Page Not Found</span>
           <span class="not-found__txt">Oops!<br />Seems like something went wrong...</span>
-          <a href="/">Return to homepage</a>
+          <g-link to="/">Return to homepage</g-link>
         </div>
       </div>
     </section>

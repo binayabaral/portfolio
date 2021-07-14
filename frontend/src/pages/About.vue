@@ -158,6 +158,7 @@ h3,
   flex-direction: column;
   @include media('screen', '>=desktop') {
     width: calc(50% - 10px);
+    justify-content: space-between;
   }
 }
 
