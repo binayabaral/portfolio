@@ -7,7 +7,7 @@
       <template v-for="blog in blogs">
         <li :key="blog.node.id" v-if="!$route.query.tag || blog.node.tags.includes($route.query.tag)">
           <g-link :to="blog.node.path" class="blog__img">
-            <g-image :src="blog.node.thumbnail"></g-image>
+            <g-image :src="blog.node.thumbnail" :alt="blog.node.title"></g-image>
           </g-link>
           <div class="blog__desc">
             <g-link :to="blog.node.path" class="blog__name h3">{{ blog.node.title }}</g-link>
@@ -22,7 +22,7 @@
             <p>{{ blog.node.description }}</p>
             <div class="blog__btn-grp">
               <g-link :to="blog.node.path" class="btn">
-                <span>Read More</span>
+                <span>Read Full Article</span>
               </g-link>
             </div>
           </div>
