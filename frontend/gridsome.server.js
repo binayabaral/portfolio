@@ -6,10 +6,10 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 const axios = require('axios');
 
-module.exports = function(api) {
+module.exports = function (api) {
   api.loadSource(async actions => {
-    const { data: projectsData } = await axios.get('http://localhost:1337/projects');
-    const { data: blogsData } = await axios.get('http://localhost:1337/blogs');
+    const { data: projectsData } = await axios.get('https://binayabaralportfolio.herokuapp.com/projects');
+    const { data: blogsData } = await axios.get('https://binayabaralportfolio.herokuapp.com/blogs');
 
     const projectsCollection = actions.addCollection({
       typeName: 'Projects',
