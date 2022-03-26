@@ -35,17 +35,17 @@ import BlogsListing from '../components/BlogsListing';
 
 export default {
   metaInfo: {
-    title: 'My Blogs',
+    title: 'My Blogs'
   },
   components: {
-    BlogsListing,
+    BlogsListing
   },
   data: () => ({
-    blogs: [],
+    blogs: []
   }),
   mounted() {
     this.blogs = this.$page.blogs.edges;
-  },
+  }
 };
 </script>
 

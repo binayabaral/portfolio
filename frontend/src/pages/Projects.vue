@@ -34,17 +34,17 @@ import ProjectsListing from '../components/ProjectsListing';
 
 export default {
   metaInfo: {
-    title: 'My Projects',
+    title: 'My Projects'
   },
   components: {
-    ProjectsListing,
+    ProjectsListing
   },
   data: () => ({
-    projects: [],
+    projects: []
   }),
   mounted() {
     this.projects = this.$page.projects.edges;
-  },
+  }
 };
 </script>
 

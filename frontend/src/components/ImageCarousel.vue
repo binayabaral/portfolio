@@ -1,6 +1,12 @@
 <template>
   <ClientOnly>
-    <Carousel :perPage="1" paginationColor="#000" paginationActiveColor="#009000" :adjustableHeight="false" ref="carousel">
+    <Carousel
+      :perPage="1"
+      paginationColor="#000"
+      paginationActiveColor="#009000"
+      :adjustableHeight="false"
+      ref="carousel"
+    >
       <Slide v-for="image in images" :key="image">
         <img :src="image" :alt="name" />
       </Slide>
@@ -18,16 +24,16 @@ export default {
     Slide: () =>
       import('vue-carousel')
         .then(m => m.Slide)
-        .catch(),
+        .catch()
   },
   props: {
     images: {
-      type: Array,
+      type: Array
     },
     name: {
-      type: String,
-    },
-  },
+      type: String
+    }
+  }
 };
 </script>
 

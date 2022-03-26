@@ -42,9 +42,9 @@ import ImageCarousel from './ImageCarousel';
 
 export default {
   components: {
-    ImageCarousel,
+    ImageCarousel
   },
-  props: ['projects'],
+  props: ['projects']
 };
 </script>
 

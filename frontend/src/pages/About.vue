@@ -8,9 +8,16 @@
           </div>
           <div class="desc">
             <h1>Binaya Baral</h1>
-            <h5>Web Developer</h5>
-            <p>Hello! I am a web developer specializing in creating everything you need to create and maintain your presence in current digital world.</p>
-            <p>Working in this field for over two years now, I have gained meaningful experience in diverse development strategies, tools and techniques that would suit each use case while also helping businesses and individuals create their strong presence in the web.</p>
+            <h5>Software Engineer</h5>
+            <p>
+              Hello! I am a Software Engineer specializing in creating everything you need to create and maintain your
+              presence in current digital world.
+            </p>
+            <p>
+              Working in this field for over three years now, I have gained meaningful experience in diverse development
+              strategies, tools and techniques that would suit each use case while also helping businesses and
+              individuals create their strong presence in the web.
+            </p>
           </div>
         </div>
         <div class="experience-education-skills">
@@ -71,12 +78,39 @@
 <script>
 export default {
   metaInfo: {
-    title: 'About Me',
+    title: 'About Me'
   },
   data: () => ({
-    experiences: [{ id: 1, companyName: 'Leapfrog Technology, Inc.', position: 'Associate Software Engineer', timePeriod: 'June 2021 - Present' }, { id: 2, companyName: 'Rapid Web Solutions', position: 'Front End Developer', timePeriod: 'September 2019 - June 2021' }],
-    education: [{ id: 3, name: 'Kantipur Engineering College, Dhapakhel, Lalitpur', year: '2021', concentration: 'Bachelor of Engineering: Computer Engineering' }, { id: 2, name: "St. Xavier's College, Maitighar, Kathmandu", year: '2016', concentration: '10 + 2. Science Faculty' }, { id: 1, name: 'Bright Future Higher Secondary School, Satdobato, Lalitpur', year: '2014', concentration: 'SLC' }],
-  }),
+    experiences: [
+      {
+        id: 1,
+        companyName: 'Leapfrog Technology, Inc.',
+        position: 'Software Engineer',
+        timePeriod: 'June 2021 - Present'
+      },
+      {
+        id: 2,
+        companyName: 'Rapid Web Solutions',
+        position: 'Front End Developer',
+        timePeriod: 'September 2019 - June 2021'
+      }
+    ],
+    education: [
+      {
+        id: 3,
+        name: 'Kantipur Engineering College, Dhapakhel, Lalitpur',
+        year: '2021',
+        concentration: 'Bachelor of Engineering: Computer Engineering'
+      },
+      {
+        id: 2,
+        name: "St. Xavier's College, Maitighar, Kathmandu",
+        year: '2016',
+        concentration: '10 + 2. Science Faculty'
+      },
+      { id: 1, name: 'Bright Future Higher Secondary School, Satdobato, Lalitpur', year: '2014', concentration: 'SLC' }
+    ]
+  })
 };
 </script>
 

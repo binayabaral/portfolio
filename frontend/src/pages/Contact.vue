@@ -3,7 +3,14 @@
     <section class="contact">
       <div class="container">
         <h1>Let's Connect!</h1>
-        <form name="contact" method="post" v-on:submit.prevent="handleSubmit" action="/success/" data-netlify="true" data-netlify-honeypot="bot-field">
+        <form
+          name="contact"
+          method="post"
+          v-on:submit.prevent="handleSubmit"
+          action="/success/"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+        >
           <input type="hidden" name="form-name" value="contact" />
           <p hidden>
             <label> Don’t fill this out: <input name="bot-field" /> </label>
@@ -35,10 +42,10 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Contact Me',
+    title: 'Contact Me'
   },
   data: () => ({
-    formData: {},
+    formData: {}
   }),
   methods: {
     encode(data) {
@@ -52,8 +59,8 @@ export default {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: this.encode({
           'form-name': e.target.getAttribute('name'),
-          ...this.formData,
-        }),
+          ...this.formData
+        })
       })
         .then(() => {
           alert('Message sent successfully');
@@ -62,8 +69,8 @@ export default {
           this.formData.message = '';
         })
         .catch(error => alert(error));
-    },
-  },
+    }
+  }
 };
 </script>
 

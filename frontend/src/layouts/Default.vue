@@ -25,7 +25,7 @@ import Footer from '../components/Footer';
 export default {
   components: {
     Header,
-    Footer,
+    Footer
   },
   mounted() {
     let defaultTheme = localStorage.getItem('userTheme');
@@ -35,7 +35,7 @@ export default {
       localStorage.setItem('userTheme', defaultTheme);
     }
     document.body.classList.add(defaultTheme);
-  },
+  }
 };
 </script>
 

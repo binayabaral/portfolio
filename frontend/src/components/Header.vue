@@ -2,7 +2,14 @@
   <header id="header">
     <div class="container">
       <g-link to="/" class="logo">3!ηα¥</g-link>
-      <a href="#" class="nav-opener" @click="toggleNav" :class="{ 'nav-active': navExpanded }" aria-label="navigation menu opener"><span></span></a>
+      <a
+        href="#"
+        class="nav-opener"
+        @click="toggleNav"
+        :class="{ 'nav-active': navExpanded }"
+        aria-label="navigation menu opener"
+        ><span></span
+      ></a>
       <nav id="nav" :class="{ 'show-nav': navExpanded }">
         <ul class="navigation-menu">
           <li v-for="navLink in navLinks" :key="navLink.linkName">
@@ -22,8 +29,13 @@
 <script>
 export default {
   data: () => ({
-    navLinks: [{ to: '/about/', linkName: 'About' }, { to: '/projects/', linkName: 'Projects' }, { to: '/blogs/', linkName: 'Blogs' }, { to: '/contact/', linkName: 'Contact' }],
-    navExpanded: false,
+    navLinks: [
+      { to: '/about/', linkName: 'About' },
+      { to: '/projects/', linkName: 'Projects' },
+      { to: '/blogs/', linkName: 'Blogs' },
+      { to: '/contact/', linkName: 'Contact' }
+    ],
+    navExpanded: false
   }),
   mounted() {
     window.addEventListener('resize', this.resize);
@@ -57,8 +69,8 @@ export default {
       setTimeout(() => {
         document.body.classList.remove('resize-active');
       }, 400);
-    },
-  },
+    }
+  }
 };
 </script>
 

@@ -15,10 +15,22 @@
         <div class="blog__share">
           <span class="blog__share-title">Share to:</span>
           <div class="blog__share-options">
-            <ShareNetwork network="facebook" :url="`https://binayabaral.com.np${$page.blogs.path}`" :title="$page.blogs.title" :description="$page.blogs.description" aria-label="share to facebook">
+            <ShareNetwork
+              network="facebook"
+              :url="`https://binayabaral.com.np${$page.blogs.path}`"
+              :title="$page.blogs.title"
+              :description="$page.blogs.description"
+              aria-label="share to facebook"
+            >
               <font-awesome :icon="['fab', 'facebook']" />
             </ShareNetwork>
-            <ShareNetwork network="twitter" :url="`https://binayabaral.com.np${$page.blogs.path}`" :title="$page.blogs.title" :description="$page.blogs.description" aria-label="share to twitter">
+            <ShareNetwork
+              network="twitter"
+              :url="`https://binayabaral.com.np${$page.blogs.path}`"
+              :title="$page.blogs.title"
+              :description="$page.blogs.description"
+              aria-label="share to twitter"
+            >
               <font-awesome :icon="['fab', 'twitter']" />
             </ShareNetwork>
           </div>
@@ -62,12 +74,12 @@ export default {
         {
           key: 'og:title',
           property: 'og:title',
-          content: this.$page.blogs.title,
+          content: this.$page.blogs.title
         },
         {
           key: 'description',
           name: 'description',
-          content: this.$page.blogs.description,
+          content: this.$page.blogs.description
         },
         { key: 'og:url', property: 'og:url', content: `https://www.binayabaral.com${this.$page.blogs.path}` },
         { property: 'og:image', content: this.$page.blogs.bannerImage },
@@ -76,32 +88,32 @@ export default {
         {
           key: 'article:published_time',
           property: 'article:published_time',
-          content: this.$page.blogs.published_at,
+          content: this.$page.blogs.published_at
         },
         { name: 'twitter:title', content: this.$page.blogs.title },
         { name: 'twitter:card', content: 'summary_large_image' },
         {
           name: 'twitter:description',
-          content: this.$page.blogs.description,
+          content: this.$page.blogs.description
         },
 
         {
           name: 'twitter:site',
-          content: 'https://twitter.com/binayabaral',
+          content: 'https://twitter.com/binayabaral'
         },
         {
           name: 'twitter:creator',
-          content: 'https://twitter.com/binayabaral',
+          content: 'https://twitter.com/binayabaral'
         },
-        { name: 'twitter:image', content: this.$page.blogs.bannerImage },
+        { name: 'twitter:image', content: this.$page.blogs.bannerImage }
       ],
-      script: [{ src: 'https://platform.twitter.com/widgets.js', async: true }],
+      script: [{ src: 'https://platform.twitter.com/widgets.js', async: true }]
     };
   },
   components: {
     VueMarkdown,
-    ShareNetwork,
-  },
+    ShareNetwork
+  }
 };
 </script>
 
