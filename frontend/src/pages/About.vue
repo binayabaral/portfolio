@@ -20,47 +20,110 @@
             </p>
           </div>
         </div>
-        <div class="experience-education-skills">
-          <div class="experience-and-education">
-            <div class="experience">
-              <h3>Experiences:</h3>
-              <ul class="experience-list">
-                <li v-for="experience in experiences" :key="experience.id">
-                  <h5 class="name">{{ experience.companyName }}</h5>
-                  <span class="more-info">{{ experience.position }}</span>
-                  <span class="time-period">{{ experience.timePeriod }}</span>
-                </li>
-              </ul>
-            </div>
-            <div class="education">
-              <h3>Education:</h3>
-              <ul class="education-list">
-                <li v-for="item in education" :key="item.id">
-                  <h5 class="name">{{ item.name }}</h5>
-                  <span class="more-info">{{ item.concentration }}</span>
-                  <span class="time-period">{{ item.year }}</span>
-                </li>
-              </ul>
-            </div>
+        <div class="experience-and-education">
+          <div class="experience">
+            <h3>Experiences</h3>
+            <ul class="experience-list">
+              <li v-for="experience in experiences" :key="experience.id">
+                <h5 class="name">{{ experience.companyName }}</h5>
+                <span class="more-info">{{ experience.position }}</span>
+                <span class="time-period">{{ experience.timePeriod }}</span>
+              </li>
+            </ul>
           </div>
-          <div class="skills-and-abilities">
-            <div class="skills-and-abilities__content">
-              <h3>Skills and Abilities</h3>
-              <ul class="skills-list">
-                <li>Familiar to front-end development using Reactjs, Redux and Vuejs.</li>
-                <li>Familiar to Nodejs and Express.</li>
-                <li>Pixel-perfect design-to-development using HTML5, CSS3, jQuery and/or ES6 vanilla js.</li>
-                <li>Game Development using HTML5 Canvas and Javascript.</li>
-                <li>Familiar with C# and .NET framework.</li>
-                <li>Acquainted with python programming Language.</li>
-                <li>Proficient in C and C++ programming languages.</li>
-                <li>Well-known to stack overflow and GitHub platforms.</li>
-                <li>Own basic Database Management skills.</li>
-                <li>Certified in entry-level CEH (Certified Ethical Hacking).</li>
-                <li>Fluent in English and Nepali Language.</li>
-                <li>Good with Ms. Word, PowerPoint, Access and Excel.</li>
-              </ul>
-            </div>
+          <div class="education">
+            <h3>Education</h3>
+            <ul class="education-list">
+              <li v-for="item in education" :key="item.id">
+                <h5 class="name">{{ item.name }}</h5>
+                <span class="more-info">{{ item.concentration }}</span>
+                <span class="time-period">{{ item.year }}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="skills-and-abilities">
+          <div class="skills-and-abilities__content">
+            <h3>What I do</h3>
+            <ul class="skills-list">
+              <li>
+                <div class="icon"><g-image src="../assets/icons/typescript.svg"></g-image></div>
+                <span class="skill-name">TypeScript</span>
+              </li>
+              <li>
+                <div class="icon"><g-image src="../assets/icons/javascript.svg"></g-image></div>
+                <span class="skill-name">JavaScript</span>
+              </li>
+              <li>
+                <div class="icon"><g-image src="../assets/icons/react.svg"></g-image></div>
+                <span class="skill-name">React</span>
+              </li>
+              <li>
+                <div class="icon"><g-image src="../assets/icons/vue.svg"></g-image></div>
+                <span class="skill-name">Vue</span>
+              </li>
+              <li>
+                <div class="icon"><g-image src="../assets/icons/redux.svg"></g-image></div>
+                <span class="skill-name">Redux</span>
+              </li>
+              <li>
+                <div class="icon"><g-image src="../assets/icons/nextjs.svg"></g-image></div>
+                <span class="skill-name">Next</span>
+              </li>
+              <li>
+                <div class="icon"><g-image src="../assets/icons/nodejs.svg"></g-image></div>
+                <span class="skill-name">Node</span>
+              </li>
+              <li>
+                <div class="icon"><g-image src="../assets/icons/express.svg"></g-image></div>
+                <span class="skill-name">Express</span>
+              </li>
+              <li>
+                <div class="icon"><g-image src="../assets/icons/html5.svg"></g-image></div>
+                <span class="skill-name">HTML5</span>
+              </li>
+              <li>
+                <div class="icon"><g-image src="../assets/icons/css3.svg"></g-image></div>
+                <span class="skill-name">CSS3</span>
+              </li>
+              <li>
+                <div class="icon"><g-image src="../assets/icons/jquery.svg"></g-image></div>
+                <span class="skill-name">jQuery</span>
+              </li>
+
+              <li>
+                <div class="icon"><g-image src="../assets/icons/docker.svg"></g-image></div>
+                <span class="skill-name">Docker</span>
+              </li>
+              <li>
+                <div class="icon"><g-image src="../assets/icons/git.svg"></g-image></div>
+                <span class="skill-name">Git</span>
+              </li>
+              <li>
+                <div class="icon"><g-image src="../assets/icons/graphql.svg"></g-image></div>
+                <span class="skill-name">GraphQL</span>
+              </li>
+              <li>
+                <div class="icon"><g-image src="../assets/icons/mssql.svg"></g-image></div>
+                <span class="skill-name">MsSQL</span>
+              </li>
+              <li>
+                <div class="icon"><g-image src="../assets/icons/postgresql.svg"></g-image></div>
+                <span class="skill-name">PostgreSQL</span>
+              </li>
+              <li>
+                <div class="icon"><g-image src="../assets/icons/python.svg"></g-image></div>
+                <span class="skill-name">Python</span>
+              </li>
+              <li>
+                <div class="icon"><g-image src="../assets/icons/figma.svg"></g-image></div>
+                <span class="skill-name">Figma</span>
+              </li>
+              <li>
+                <div class="icon"><g-image src="../assets/icons/photoshop.svg"></g-image></div>
+                <span class="skill-name">Photoshop</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -117,6 +180,8 @@ export default {
 <style lang="scss" scoped>
 h3,
 .h3 {
+  display: block;
+  text-align: center;
   text-decoration: underline;
 }
 
@@ -177,21 +242,13 @@ h3,
   }
 }
 
-.experience-education-skills {
-  display: flex;
-  flex-direction: column;
-
-  @include media('screen', '>=desktop') {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
 .experience-and-education {
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
+
   @include media('screen', '>=desktop') {
-    width: calc(50% - 10px);
+    flex-direction: row;
     justify-content: space-between;
   }
 }
@@ -202,7 +259,12 @@ h3,
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px 30px;
   border-radius: 10px;
+  width: 100%;
   @include animate(background box-shadow);
+
+  @include media('screen', '>=desktop') {
+    width: calc(50% - 10px);
+  }
 
   .dark-mode & {
     background: $elephant;
@@ -225,13 +287,8 @@ h3,
   }
 }
 
-.experience {
-  margin-bottom: 20px;
-}
-
 ul {
   @extend %listreset;
-
   li {
     padding-left: 20px;
     position: relative;
@@ -250,15 +307,44 @@ ul {
       margin-top: 15px;
     }
   }
+
+  &.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: space-between;
+    justify-content: space-around;
+
+    li {
+      padding: 20px;
+      width: 145px;
+
+      img {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .icon {
+        margin-bottom: 15px;
+      }
+
+      .skill-name {
+        display: block;
+        text-align: center;
+      }
+
+      &:before {
+        content: none;
+      }
+
+      + li {
+        margin: 0;
+      }
+    }
+  }
 }
 
 .skills-and-abilities {
-  padding-top: 20px;
-  @include media('screen', '>=desktop') {
-    padding: 0;
-    width: calc(50% - 10px);
-  }
-
   &__content {
     background: $alabaster;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
