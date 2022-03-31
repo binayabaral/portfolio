@@ -215,6 +215,9 @@ h3,
 
   img {
     border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -284,6 +287,14 @@ h3,
 
   .time-period {
     font-size: 14px;
+  }
+}
+
+.experience {
+  margin-bottom: 20px;
+
+  @include media('screen', '>=desktop') {
+    margin-bottom: 0;
   }
 }
 
