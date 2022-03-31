@@ -4,7 +4,7 @@
       <div class="container">
         <div class="img-and-desc">
           <div class="img">
-            <g-image src="../assets/img02.jpg"></g-image>
+            <g-image src="../assets/img02.jpg" alt="Binaya Baral"></g-image>
           </div>
           <div class="desc">
             <h1>Binaya Baral</h1>
@@ -47,80 +47,80 @@
             <h3>What I do</h3>
             <ul class="skills-list">
               <li>
-                <div class="icon"><g-image src="../assets/icons/typescript.svg"></g-image></div>
+                <div class="icon"><g-image src="../assets/icons/typescript.svg" alt="TypeScript"></g-image></div>
                 <span class="skill-name">TypeScript</span>
               </li>
               <li>
-                <div class="icon"><g-image src="../assets/icons/javascript.svg"></g-image></div>
+                <div class="icon"><g-image src="../assets/icons/javascript.svg" alt="JavaScript"></g-image></div>
                 <span class="skill-name">JavaScript</span>
               </li>
               <li>
-                <div class="icon"><g-image src="../assets/icons/react.svg"></g-image></div>
+                <div class="icon"><g-image src="../assets/icons/react.svg" alt="React js"></g-image></div>
                 <span class="skill-name">React</span>
               </li>
               <li>
-                <div class="icon"><g-image src="../assets/icons/vue.svg"></g-image></div>
+                <div class="icon"><g-image src="../assets/icons/vue.svg" alt="Vue js"></g-image></div>
                 <span class="skill-name">Vue</span>
               </li>
               <li>
-                <div class="icon"><g-image src="../assets/icons/redux.svg"></g-image></div>
+                <div class="icon"><g-image src="../assets/icons/redux.svg" alt="Redux js"></g-image></div>
                 <span class="skill-name">Redux</span>
               </li>
               <li>
-                <div class="icon"><g-image src="../assets/icons/nextjs.svg"></g-image></div>
+                <div class="icon"><g-image src="../assets/icons/nextjs.svg" alt="Next js"></g-image></div>
                 <span class="skill-name">Next</span>
               </li>
               <li>
-                <div class="icon"><g-image src="../assets/icons/nodejs.svg"></g-image></div>
+                <div class="icon"><g-image src="../assets/icons/nodejs.svg" alt="Node js"></g-image></div>
                 <span class="skill-name">Node</span>
               </li>
               <li>
-                <div class="icon"><g-image src="../assets/icons/express.svg"></g-image></div>
+                <div class="icon"><g-image src="../assets/icons/express.svg" alt="Express js"></g-image></div>
                 <span class="skill-name">Express</span>
               </li>
               <li>
-                <div class="icon"><g-image src="../assets/icons/html5.svg"></g-image></div>
+                <div class="icon"><g-image src="../assets/icons/html5.svg" alt="HTML5"></g-image></div>
                 <span class="skill-name">HTML5</span>
               </li>
               <li>
-                <div class="icon"><g-image src="../assets/icons/css3.svg"></g-image></div>
+                <div class="icon"><g-image src="../assets/icons/css3.svg" alt="CSS3"></g-image></div>
                 <span class="skill-name">CSS3</span>
               </li>
               <li>
-                <div class="icon"><g-image src="../assets/icons/jquery.svg"></g-image></div>
+                <div class="icon"><g-image src="../assets/icons/jquery.svg" alt="jQuery"></g-image></div>
                 <span class="skill-name">jQuery</span>
               </li>
 
               <li>
-                <div class="icon"><g-image src="../assets/icons/docker.svg"></g-image></div>
+                <div class="icon"><g-image src="../assets/icons/docker.svg" alt="Docker"></g-image></div>
                 <span class="skill-name">Docker</span>
               </li>
               <li>
-                <div class="icon"><g-image src="../assets/icons/git.svg"></g-image></div>
+                <div class="icon"><g-image src="../assets/icons/git.svg" alt="Git and GitHub"></g-image></div>
                 <span class="skill-name">Git</span>
               </li>
               <li>
-                <div class="icon"><g-image src="../assets/icons/graphql.svg"></g-image></div>
+                <div class="icon"><g-image src="../assets/icons/graphql.svg" alt="GraphQL"></g-image></div>
                 <span class="skill-name">GraphQL</span>
               </li>
               <li>
-                <div class="icon"><g-image src="../assets/icons/mssql.svg"></g-image></div>
+                <div class="icon"><g-image src="../assets/icons/mssql.svg" alt="MsSQL"></g-image></div>
                 <span class="skill-name">MsSQL</span>
               </li>
               <li>
-                <div class="icon"><g-image src="../assets/icons/postgresql.svg"></g-image></div>
+                <div class="icon"><g-image src="../assets/icons/postgresql.svg" alt="PostgreSQL"></g-image></div>
                 <span class="skill-name">PostgreSQL</span>
               </li>
               <li>
-                <div class="icon"><g-image src="../assets/icons/python.svg"></g-image></div>
+                <div class="icon"><g-image src="../assets/icons/python.svg" alt="Python"></g-image></div>
                 <span class="skill-name">Python</span>
               </li>
               <li>
-                <div class="icon"><g-image src="../assets/icons/figma.svg"></g-image></div>
+                <div class="icon"><g-image src="../assets/icons/figma.svg" alt="Figma"></g-image></div>
                 <span class="skill-name">Figma</span>
               </li>
               <li>
-                <div class="icon"><g-image src="../assets/icons/photoshop.svg"></g-image></div>
+                <div class="icon"><g-image src="../assets/icons/photoshop.svg" alt="Photoshop"></g-image></div>
                 <span class="skill-name">Photoshop</span>
               </li>
             </ul>
